@@ -1,15 +1,37 @@
 {%- comment -%}
-  Photo gallery: one thumbnail link per image in img/<folder>/, sorted by file name.
+  Photo gallery: one thumbnail per image in img/<folder>/, sorted by file name.
   Usage: {% include gallery.html folder="akon1" title="Akon I" %}
-  The links are written without whitespace between them (spaces would add gaps between thumbnails).
+
+  * the grid shows small thumbnails from img/<folder>/thumbs/ (create them with tools/make_thumbnails.py);
+    the full-size photo is loaded only when it is opened in the viewer
+  * only the first `page_size` photos are shown; the rest are hidden until "Zobraziť ďalšie" is clicked,
+    so their thumbnails are not downloaded at all (without JavaScript everything is shown)
+  * links are written without whitespace between them (spaces would add gaps between thumbnails)
 {%- endcomment -%}
+{%- assign page_size = include.page_size | default: 30 -%}
 {%- assign prefix = "/img/" | append: include.folder | append: "/" -%}
+{%- assign thumbs_prefix = prefix | append: "thumbs/" -%}
 {%- assign photos = site.static_files | sort: "path" -%}
-<div id="galeria">
+{%- assign total = 0 -%}
+{%- for photo in photos -%}
+  {%- if photo.path contains prefix -%}{%- unless photo.path contains thumbs_prefix -%}{%- assign total = total | plus: 1 -%}{%- endunless -%}{%- endif -%}
+{%- endfor -%}
+{%- assign shown = 0 -%}
+<div id="galeria" data-page-size="{{ page_size }}">
 {%- for photo in photos -%}
   {%- unless photo.path contains prefix -%}{%- continue -%}{%- endunless -%}
+  {%- if photo.path contains thumbs_prefix -%}{%- continue -%}{%- endif -%}
+  {%- assign shown = shown | plus: 1 -%}
   {%- assign number = photo.basename | split: "_" | last | plus: 0 -%}
   {%- assign src = "img/" | append: include.folder | append: "/" | append: photo.name -%}
-  <a href="{{ src }}" data-lightbox="image-1"><img src="{{ src }}" alt="{{ include.title }} - fotka {{ number }}"></a>
+  {%- assign thumb = "img/" | append: include.folder | append: "/thumbs/" | append: photo.name -%}
+  <a href="{{ src }}" data-lightbox="image-1"{% if shown > page_size %} hidden{% endif %}><img src="{{ thumb }}" alt="{{ include.title }} - fotka {{ number }}" loading="lazy" decoding="async"></a>
 {%- endfor -%}
 </div>
+{%- if total > page_size %}
+<p class="gallery-more">
+    <button type="button" class="gallery-more-button" aria-controls="galeria">Zobraziť ďalšie fotky</button>
+    <span class="gallery-count">{{ page_size }} / {{ total }}</span>
+</p>
+<noscript><style>#galeria a[hidden] { display: inline; } .gallery-more { display: none; }</style></noscript>
+{%- endif %}

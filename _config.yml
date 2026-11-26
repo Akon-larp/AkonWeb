@@ -7,3 +7,4 @@ url: ""
 exclude:
   - "*.php"
   - "README.md"
+  - "tools"

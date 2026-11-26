@@ -102,6 +102,22 @@
     open(link);
   });
 
+  // "Zobraziť ďalšie fotky": the gallery page starts with the first batch, each click shows the next one
+  const moreButton = document.querySelector('.gallery-more-button');
+  if (moreButton) {
+    const gallery = document.getElementById(moreButton.getAttribute('aria-controls'));
+    const pageSize = Number(gallery.dataset.pageSize) || 30;
+    const counter = document.querySelector('.gallery-count');
+    const links = Array.from(gallery.querySelectorAll('a[data-lightbox]'));
+    moreButton.addEventListener('click', () => {
+      const next = links.filter((a) => a.hidden).slice(0, pageSize);
+      for (const link of next) link.hidden = false;
+      const visible = links.filter((a) => !a.hidden).length;
+      counter.textContent = `${visible} / ${links.length}`;
+      if (visible === links.length) moreButton.parentElement.hidden = true;
+    });
+  }
+
   document.addEventListener('keydown', (e) => {
     if (overlay?.style.display !== 'flex') return;
     if (e.key === 'Escape') close();

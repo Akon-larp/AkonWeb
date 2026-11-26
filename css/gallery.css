@@ -97,3 +97,31 @@ body.gv-open {
     opacity: 0.8;
   }
 }
+
+/* "Zobraziť ďalšie fotky" under a gallery (see _includes/gallery.html) */
+.gallery-more {
+  text-align: center;
+  margin: 15px 0 5px;
+}
+
+.gallery-more-button {
+  font: bold 12pt serif;
+  color: #121212;
+  background: white;
+  opacity: 0.6;
+  border: 0;
+  padding: 8px 24px;
+  cursor: pointer;
+}
+
+.gallery-more-button:hover,
+.gallery-more-button:focus-visible {
+  opacity: 1;
+}
+
+.gallery-count {
+  display: block;
+  margin-top: 6px;
+  font-size: 10pt;
+  color: #ccc;
+}
