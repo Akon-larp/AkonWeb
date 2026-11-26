@@ -10,8 +10,14 @@ css: form.css
     na FB na meno Nina Hollá, prípadne ich riešte so mnou cez mobil: 0908481813.
 </p>
 
-<form id="registracia" class="reg-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="post">
+<form id="registracia" class="reg-form" action="https://formsubmit.co/{{ site.form_email }}" method="post">
     <input type="hidden" name="_subject" value="Akon - nová registrácia">
+    <input type="hidden" name="_template" value="table">
+    <p class="form_trap" hidden>
+        <!-- spam trap: people never see this field, bots fill it in and FormSubmit drops their message -->
+        <label for="honey">Toto pole nevypĺňaj</label>
+        <input type="text" id="honey" name="_honey" tabindex="-1" autocomplete="off">
+    </p>
     <ol class="phpfmg_form">
         <li class="field_block">
             <div class="col_label"><label class="form_field" for="meno">Meno a priezvisko</label> <span class="form_required">*</span></div>

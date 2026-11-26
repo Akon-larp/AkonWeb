@@ -17,27 +17,37 @@
     button.setAttribute('aria-expanded', String(open));
   });
 
-  // registration form: send to Formspree in the background and show the thank-you message
+  // registration form: send to FormSubmit (formsubmit.co) in the background and show the thank-you message.
+  // The form's action is https://formsubmit.co/<address>; the AJAX endpoint is https://formsubmit.co/ajax/<address>.
   const form = document.getElementById('registracia');
   if (form) {
     const thanks = document.getElementById('thank_you_msg');
     const error = document.getElementById('form_error');
+    const errorText = error.querySelector('.form_error_title');
+    const defaultError = errorText.textContent;
     const submit = form.querySelector('button[type="submit"]');
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       error.hidden = true;
       submit.disabled = true;
       try {
-        const response = await fetch(form.action, {
+        const data = new FormData(form);
+        data.append('_replyto', form.querySelector('#email').value); // "Reply" in the email goes to the player
+        const response = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
           method: 'POST',
-          body: new FormData(form),
+          body: data,
           headers: { Accept: 'application/json' },
         });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const result = await response.json().catch(() => ({}));
+        // FormSubmit answers {"success": "true"} or {"success": "false", "message": "..."}
+        if (!response.ok || String(result.success) !== 'true') {
+          throw new Error(result.message || `HTTP ${response.status}`);
+        }
         form.hidden = true;
         thanks.hidden = false;
       } catch (err) {
         console.error('Registrácia sa neodoslala:', err);
+        errorText.textContent = err.message.startsWith('HTTP') ? defaultError : `${defaultError} (${err.message})`;
         error.hidden = false;
       } finally {
         submit.disabled = false;
