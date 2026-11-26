@@ -1,39 +1,38 @@
-﻿---
-layout: default
-title: "Pribeh"
----
+<?php
+  include "head.php";
+?>
 <body>
   <div id="all">
     <div id="top-banner">
-      <img src="img/topbanner.png">
+      <img src="data/topbanner.png">
     </div>
     <div id="menu">
       <dl>
-        <a href="uvod.html">
+        <a href="uvod.php">
           <dd> Úvod
           </dd></a>
-        <a href="pribeh.html">
+        <a href="pribeh.php">
           <dd> Príbeh
           </dd></a>
-        <a href="pravidla.html">
+        <a href="pravidla.php">
           <dd> Pravidlá
           </dd></a>
-        <a href="fotky.html">
+        <a href="fotky.php">
           <dd> Fotky
           </dd></a>
-        <a href="reg.html">
+        <a href="reg.php">
           <dd> Registrácia
           </dd></a>
-        <a href="kontakt.html">
+        <a href="kontakt.php">
           <dd> Kontakt
           </dd></a>
       </dl>
     </div>
-    <img id="obrazL" src="img/zena.png">
-    <img id="obrazR" src="img/paladin.png" width="105px">
+    <img id="obrazL" src="data/zena.png">
+    <img id="obrazR" src="data/fuso.png" width="105px">
     <div id="content">
       <h1>Príbeh</h1>
-      <a href="img/mapa.jpg" data-lightbox="image-1"><img src="img/mapa.jpg" width="200px" style="position:relative; float: right;"></a>
+      <a href="data/mapa.jpg" data-lightbox="image-1"><img src="data/mapa.jpg" width="200px" style="position:relative; float: right;"></a>
       <h2>
         <u>Dokumenty:</u></h2>
       <div id="clickable">
@@ -75,3 +74,4 @@ title: "Pribeh"
         </div>
       </div>
 </body>
+</html>

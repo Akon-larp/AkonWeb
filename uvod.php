@@ -1,36 +1,35 @@
-﻿---
-layout: default
-title: "Uvod"
----
+<?php
+  include "head.php";
+?>
 <body>
   <div id="all">
     <div id="top-banner">
-      <img src="img/topbanner.png">
+      <img src="data/topbanner.png">
     </div>
     <div id="menu">
       <dl>
-        <a href="uvod.html">
+        <a href="uvod.php">
           <dd> Úvod
           </dd></a>
-        <a href="pribeh.html">
+        <a href="pribeh.php">
           <dd> Príbeh
           </dd></a>
-        <a href="pravidla.html">
+        <a href="pravidla.php">
           <dd> Pravidlá
           </dd></a>
-        <a href="fotky.html">
+        <a href="fotky.php">
           <dd> Fotky
           </dd></a>
-        <a href="reg.html">
+        <a href="reg.php">
           <dd> Registrácia
           </dd></a>
-        <a href="kontakt.html">
+        <a href="kontakt.php">
           <dd> Kontakt
           </dd></a>
       </dl>
     </div>
-    <img id="obrazL" src="img/zena.png">
-    <img id="obrazR" src="img/paladin.png">
+    <img id="obrazL" src="data/zena.png">
+    <img id="obrazR" src="data/fuso.png">
     <div id="content">
       <h1>Úvod</h1>
       <h1><u>Akon - Vojnou zmietaná zem</u></h1>
@@ -41,7 +40,7 @@ title: "Uvod"
           Ak si budete chcieť registrovať postavu z minulých ročníkov, tak tie sa budúriešiť s každým osobitne.
 
       </p>
-      <a href="img/lokacia.jpg" data-lightbox="image-1"><img src="img/lokacia.jpg" width="200px" style="position:relative; float: right;"></a>
+      <a href="data/lokacia.jpg" data-lightbox="image-1"><img src="data/lokacia.jpg" width="200px" style="position:relative; float: right;"></a>
       <h2>Lokácia</h2>
       <p>
         Akon 5 sa uskutoční neďaleko Trenčína za obcou Kubrica. Najlepšie ako sa na miesto dostat je príst vlakom alebo autobusom do Trenčína na stanicu a odtial prestúpiť na MHD-linky 7,11,13 ktoré vás dovezú na poslednú zastavku Kubrica námestie. Odtial je to ešte 2.5 km šlapania smerom ku chate Kubrica. Asi 60 metrov pred touto chatou po pravej strane sa da parkovat, takže tý čo prídete autami tak ich prosim odparkujte tu. Odtialto je to už na lokačku len nejakých 500 metrov.
@@ -56,3 +55,4 @@ title: "Uvod"
     </div>
   </div>
 </body>
+</html>

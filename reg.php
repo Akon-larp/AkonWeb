@@ -1,36 +1,35 @@
-﻿---
-layout: default
-title: "Registracia"
----
+<?php
+  include "head.php";
+?>
 <body>
   <div id="all">
     <div id="top-banner">
-      <img src="img/topbanner.png">
+      <img src="data/topbanner.png">
     </div>
     <div id="menu">
       <dl>
-        <a href="uvod.html">
+        <a href="uvod.php">
           <dd> Úvod
           </dd></a>
-        <a href="pribeh.html">
+        <a href="pribeh.php">
           <dd> Príbeh
           </dd></a>
-        <a href="pravidla.html">
+        <a href="pravidla.php">
           <dd> Pravidlá
           </dd></a>
-        <a href="fotky.html">
+        <a href="fotky.php">
           <dd> Fotky
           </dd></a>
-        <a href="reg.html">
+        <a href="reg.php">
           <dd> Registrácia
           </dd></a>
-        <a href="kontakt.html">
+        <a href="kontakt.php">
           <dd> Kontakt
           </dd></a>
       </dl>
     </div>
-    <img id="obrazL" src="img/zena.png">
-    <img id="obrazR" src="img/paladin.png" width="105px">
+    <img id="obrazL" src="data/zena.png">
+    <img id="obrazR" src="data/fuso.png" width="105px">
     <div id="content">
       <h1>Registrácia</h1>
 <h2>Registračka</h2>      
@@ -50,9 +49,10 @@ title: "Registracia"
         - Či je postava nová, alebo pokračuje z minula<br />
         - BackGround(povod postavy, ciele..)<br />
         - Ak má niekto vážne zdravotné problémi tak ich uvádzajte pri registrácii!!<br />
-        - Pre tých ktorí ešte nedovŕšili 18 rokov v deň začatia akcie je potrebné aby ste doniesli vyplnené <a href="img/prehlasenie.doc">prehlásenie.</a><br /><br />
+        - Pre tých ktorí ešte nedovŕšili 18 rokov v deň začatia akcie je potrebné aby ste doniesli vyplnené <a href="data/prehlasenie.doc">prehlásenie.</a><br /><br />
         <b>Prehlásenie:</b> Organizátor tejto hry nepreberá akúkoľvek zodpovednosť za majetok, zdravie či život účastníkov hry.
       </p>
     </div>
   </div>
 </body>
+</html>
