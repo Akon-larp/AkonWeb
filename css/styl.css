@@ -1,7 +1,6 @@
 body
 {
   font: 500 13pt sans-serif ;
-  font-height: 20pt;
   color: white;
   margin: 0;
   padding: 0px 0px;
@@ -131,60 +130,60 @@ h4
   font-size: 110%;
 }
 
-#clickable div
+.clickable div
 {
   display: none;
 }
 
-#clickable a
+.clickable a
 {
   cursor:pointer;
   color: white;
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
-#clickable h2.click
+.clickable h2.click
 {
   cursor:pointer;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
-#clickable h2.click:hover
+.clickable h2.click:hover
 {
   color: #bb0000;
 }
 
-#clickable h3.click
+.clickable h3.click
 {
   cursor:pointer;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
-#clickable h3.click:hover
+.clickable h3.click:hover
 {
   color: #bb0000;
 }
 
-#clickable h4.click
+.clickable h4.click
 {
   text-align: center;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
-#clickable h4.click:hover
+.clickable h4.click:hover
 {
   color: #bb0000;
 }
 
-#clickable h5
+.clickable h5
 {
   font-size: 16pt;
-  font-family: "Monotype Corsiva";
-  transition: 0.3s;
+  font-family: "Monotype Corsiva", cursive;
+  transition: color 0.3s;
 }
 
-#clickable h5.click:hover
+.clickable h5.click:hover
 {
   color: #bb0000;
 }
@@ -201,7 +200,7 @@ table
   max-height: 75px;
 }
 
-#fotkyheader
+.fotkyheader
 {
   clear:both;
   max-height: 300px;
@@ -213,4 +212,69 @@ span.error
 {
   color: red;
   font: 600 13pt sans-serif;
+}
+
+/* collapsible section headings: the clickable part is a <button> (keyboard + screen readers) */
+.clickable button.toggle
+{
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* table headers look like normal cells (they are there for screen readers) */
+#content th
+{
+  font-weight: inherit;
+  text-align: inherit;
+}
+
+/* replaces the old cellpadding="5px" attribute */
+table.pad5 td,
+table.pad5 th
+{
+  padding: 5px;
+}
+
+/* replaces the old rules="all" attribute: lines between all cells, no outer frame
+   (same as the browser does it: collapsed borders, the table's own border hidden) */
+table.rules
+{
+  border-collapse: collapse;
+  border-style: hidden;
+}
+
+table.rules td,
+table.rules th
+{
+  border: 1px solid;
+}
+
+table.rules th
+{
+  width: 145px;
+}
+
+/* two columns of abilities (berserker "Zdokonalenie schopností"); spacing matches the old layout table */
+ul.ability-grid
+{
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 38px;
+  row-gap: 2px;
+  width: max-content;
+  margin: 0;
+  padding: 2px;
+  list-style: none;
+  text-align: center;
+}
+
+ul.ability-grid li
+{
+  padding: 5px;
 }

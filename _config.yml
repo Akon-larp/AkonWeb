@@ -1,6 +1,8 @@
 title: "Akon - Vojnou zmietana zem"
 description: "LARP Akon 5"
 baseurl: ""
+# Formspree form ID for the registration form (reg.html), e.g. "xyzabcd" from https://formspree.io/f/xyzabcd
+formspree_id: ""
 url: ""
 exclude:
   - "*.php"

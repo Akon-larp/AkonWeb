@@ -1,0 +1,15 @@
+{%- comment -%}
+  Photo gallery: one thumbnail link per image in img/<folder>/, sorted by file name.
+  Usage: {% include gallery.html folder="akon1" title="Akon I" %}
+  The links are written without whitespace between them (spaces would add gaps between thumbnails).
+{%- endcomment -%}
+{%- assign prefix = "/img/" | append: include.folder | append: "/" -%}
+{%- assign photos = site.static_files | sort: "path" -%}
+<div id="galeria">
+{%- for photo in photos -%}
+  {%- unless photo.path contains prefix -%}{%- continue -%}{%- endunless -%}
+  {%- assign number = photo.basename | split: "_" | last | plus: 0 -%}
+  {%- assign src = "img/" | append: include.folder | append: "/" | append: photo.name -%}
+  <a href="{{ src }}" data-lightbox="image-1"><img src="{{ src }}" alt="{{ include.title }} - fotka {{ number }}"></a>
+{%- endfor -%}
+</div>

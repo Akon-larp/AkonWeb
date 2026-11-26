@@ -37,6 +37,14 @@ body.gv-open {
 }
 
 .gv-prev,
+.gv-next,
+.gv-close {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.gv-prev,
 .gv-next {
   position: absolute;
   top: 0;

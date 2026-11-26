@@ -1,0 +1,97 @@
+/* Registration form (reg.html). Same look as the original PHP FormMail form. */
+ol.phpfmg_form {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ol.phpfmg_form input,
+ol.phpfmg_form textarea,
+ol.phpfmg_form select {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font: inherit;
+  font-size: 11pt;
+  box-sizing: border-box;
+}
+
+ol.phpfmg_form li {
+  margin-bottom: 5px;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.form_field,
+.form_required {
+  font-weight: bold;
+}
+
+.form_required {
+  color: red;
+  margin-right: 8px;
+}
+
+.form_submit_block {
+  padding-top: 3px;
+}
+
+.text_box,
+.text_select {
+  height: 32px;
+}
+
+.text_box,
+.text_area,
+.text_select {
+  min-width: 160px;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.text_area {
+  height: 80px;
+}
+
+.form_error_title {
+  font-weight: bold;
+  color: red;
+}
+
+.form_error {
+  background-color: #f4f6e5;
+  border: 1px dashed #f00;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+div.instruction {
+  display: inline-block;
+}
+
+.form_button {
+  padding: 10px 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: #fafbfc;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form_button:hover {
+  background-color: #e4f0f8;
+}
+
+.form_button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+#thank_you_msg {
+  font-size: 130%;
+  font-weight: bold;
+  margin: 20px 0;
+}

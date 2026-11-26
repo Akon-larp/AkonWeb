@@ -1,0 +1,13 @@
+# Main menu (order = order on the page). "page" is the file name without .html and matches "menu:" in each page.
+- page: index
+  title: Úvod
+- page: pribeh
+  title: Príbeh
+- page: pravidla
+  title: Pravidlá
+- page: fotky
+  title: Fotky
+- page: reg
+  title: Registrácia
+- page: kontakt
+  title: Kontakt
