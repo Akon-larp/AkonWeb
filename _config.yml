@@ -1,11 +1,18 @@
-title: "Akon - Vojnou zmietana zem"
-description: "LARP Akon 5"
-baseurl: ""
+title: "Akon - Vojnou zmietaná zem"
+# default description for search engines and link previews (pages can set their own "description:")
+description: "Akon - klasický fantasy LARP plný hrdinov, kúziel, beštií a intríg v lesoch pri Trenčíne."
+# Where the site is published. Used for absolute links (Facebook previews, the 404 page).
+# With a custom domain (e.g. akon.larp.sk) set url to "https://akon.larp.sk" and baseurl to "".
+url: "https://akon-larp.github.io"
+baseurl: "/AkonWeb"
+lang: "sk"
 # Where the registration form (reg.html) is sent, via FormSubmit (https://formsubmit.co, free, no account).
 # The first submission sends an activation email to this address; click "Activate Form" in it once.
 # After activation FormSubmit also gives you a random alias - put it here instead to hide the address.
 form_email: "none@yet.com"
-url: ""
+# Facebook event shown on the Kontakt page; leave empty to hide the link,
+# e.g. "https://www.facebook.com/events/<event number>/"
+facebook_event: ""
 exclude:
   - "*.php"
   - "README.md"

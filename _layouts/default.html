@@ -1,40 +1,69 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sk" lang="sk">
+{%- comment -%}
+  Page title: "<page title> – Akon", or the site title on pages without one (Úvod).
+  Description: the page's "description:" or the site default from _config.yml.
+  Paths use relative_url so they also work on the 404 page, which GitHub Pages serves at any address.
+{%- endcomment -%}
+{%- if page.title -%}
+  {%- assign full_title = page.title | append: " – Akon" -%}
+{%- else -%}
+  {%- assign full_title = site.title -%}
+{%- endif -%}
+{%- assign description = page.description | default: site.description -%}
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="language" content="sk" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Akon - Vojnou zmietaná zem.</title>
-    <link rel="icon" href="favicon.ico" sizes="48x48">
-    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <meta name="author" content="Andrej Masár" />
-    <meta name="description" content="Akon - Vojnou zmietaná zem" />
-    <meta name="keywords" content="LARP, larp, Larp, Akon, Akon - vojnou zmietana zem, akon, Nová Dubnica, nová dubnica, Nová dubnica, nová Dubnica, nova dubnica, Nova dubnica, Nova Dubnica, nova Dubnica" />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" type="text/css" href="css/styl.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="css/gallery.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ full_title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="author" content="Andrej Masár">
+    <meta name="robots" content="{{ page.robots | default: 'index,follow' }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+    <!-- link previews (Facebook, Messenger, WhatsApp, ...) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Akon">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:title" content="{{ full_title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ '/img/og-image.jpg' | absolute_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Akon - Vojnou zmietaná zem">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="48x48">
+    <link rel="icon" href="{{ '/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ '/img/apple-touch-icon.png' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/styl.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/responsive.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/gallery.css' | relative_url }}">
     {%- if page.css %}
-    <link rel="stylesheet" type="text/css" href="css/{{ page.css }}">
+    <link rel="stylesheet" href="{{ '/css/' | append: page.css | relative_url }}">
     {%- endif %}
-    <script src="js/gallery.js" defer></script>
-    <script src="js/site.js" defer></script>
+    <script src="{{ '/js/gallery.js' | relative_url }}" defer></script>
+    <script src="{{ '/js/site.js' | relative_url }}" defer></script>
 </head>
 <body>
     <div id="all">
         <div id="top-banner">
-            <img src="img/topbanner.png" alt="Akon - Vojnou zmietaná zem">
+            <img src="{{ '/img/topbanner.png' | relative_url }}" alt="Akon - Vojnou zmietaná zem">
         </div>
-        <div id="menu">
-            <dl>
+        <nav id="menu" aria-label="Hlavné menu">
+            <ul>
                 {%- for item in site.data.menu %}
-                <a href="{{ item.page }}.html"><dd{% if page.menu == item.page %} class="menu-active"{% endif %}>{{ item.title }}</dd></a>
+                {%- assign href = '/' | append: item.page | append: '.html' | relative_url %}
+                {%- if page.menu == item.page %}
+                <li class="menu-active"><a href="{{ href }}" aria-current="page">{{ item.title }}</a></li>
+                {%- else %}
+                <li><a href="{{ href }}">{{ item.title }}</a></li>
+                {%- endif %}
                 {%- endfor %}
-            </dl>
-        </div>
-        <img id="obrazL" src="img/zena.png" alt="">
-        <img id="obrazR" src="img/paladin.png" alt=""{% if page.menu != "index" %} width="105px"{% endif %}>
+            </ul>
+        </nav>
+        <img id="obrazL" src="{{ '/img/zena.png' | relative_url }}" alt="">
+        <img id="obrazR" src="{{ '/img/paladin.png' | relative_url }}" alt=""{% if page.menu != "index" %} width="105"{% endif %}>
         <div id="content">
 {{ content }}
         </div>

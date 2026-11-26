@@ -95,3 +95,8 @@ div.instruction {
   font-weight: bold;
   margin: 20px 0;
 }
+
+/* <output> is inline by default; show it as a block only once it is revealed */
+#thank_you_msg:not([hidden]) {
+  display: block;
+}

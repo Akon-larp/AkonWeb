@@ -55,25 +55,27 @@
     margin: 5px 0 12px;
   }
 
-  #menu dl {
+  #menu ul {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     margin: 0;
   }
 
-  #menu a {
+  #menu li {
     flex: 1 1 0;
     min-width: 90px;
-  }
-
-  #menu dd {
     float: none;
     width: auto;
     height: auto;
     margin: 0;
-    padding: 8px 3px;
+    padding: 0;
     line-height: 1.2;
+  }
+
+  /* the whole button is the link (bigger tap target) */
+  #menu a {
+    padding: 8px 3px;
   }
 
   #menu.sticky {

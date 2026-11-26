@@ -1,5 +1,7 @@
 ---
 layout: default
+title: "Registrácia"
+description: "Registrácia hráčov na LARP Akon."
 menu: reg
 css: form.css
 ---
@@ -40,8 +42,8 @@ css: form.css
         <li class="field_block">
             <div class="col_label"><label class="form_field" for="vek">Vek</label> <span class="form_required">*</span></div>
             <div class="col_field">
-                <input type="number" id="vek" name="Vek" required aria-describedby="vek_tip" min="1" max="120" inputmode="numeric" class="text_box">
-                <div id="vek_tip" class="instruction">vek hráča, ktorý dosiahne ku začiatku larpu</div>
+                <input type="number" id="vek" name="Vek" required aria-describedby="vek_tip" min="16" max="99" inputmode="numeric" class="text_box">
+                <div id="vek_tip" class="instruction">vek hráča, ktorý dosiahne ku začiatku larpu (najmenej 16 rokov)</div>
             </div>
         </li>
         <li class="field_block">
@@ -149,6 +151,6 @@ css: form.css
         </li>
     </ol>
 </form>
-<div id="thank_you_msg" role="status" hidden>
+<output id="thank_you_msg" form="registracia" hidden>
     Registračka bola odoslaná!
-</div>
+</output>

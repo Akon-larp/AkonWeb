@@ -56,18 +56,46 @@
   }
 
   const menu = document.getElementById('menu');
-  if (!menu) return;
+  const content = document.getElementById('content');
+  if (!menu || !content) return;
   let stickAt = null;
+
+  // While the menu is fixed it no longer takes up space, so the page would jump up.
+  // A spacer takes its place; its height is exactly how far the content moved.
+  const spacer = document.createElement('div');
+  spacer.className = 'menu-spacer';
+  spacer.setAttribute('aria-hidden', 'true');
+  spacer.hidden = true;
+  menu.after(spacer);
+
+  const setSticky = (on) => {
+    if (on === menu.classList.contains('sticky')) return;
+    if (on) {
+      const before = content.getBoundingClientRect().top;
+      menu.classList.add('sticky');
+      spacer.style.height = '0px';
+      spacer.hidden = false;
+      spacer.style.height = `${before - content.getBoundingClientRect().top}px`;
+    } else {
+      menu.classList.remove('sticky');
+      spacer.hidden = true;
+    }
+  };
 
   const updateSticky = () => {
     if (!menu.classList.contains('sticky')) {
       // measured while the menu is in its normal place (the banner may still be loading)
       stickAt = menu.offsetTop;
     }
-    menu.classList.toggle('sticky', globalThis.scrollY >= stickAt);
+    setSticky(globalThis.scrollY >= stickAt);
   };
 
   globalThis.addEventListener('scroll', updateSticky, { passive: true });
   globalThis.addEventListener('load', updateSticky);
+  // the menu's height changes with the screen width (it wraps on phones): measure again
+  globalThis.addEventListener('resize', () => {
+    setSticky(false);
+    updateSticky();
+  });
   updateSticky();
 })();

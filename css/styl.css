@@ -54,44 +54,47 @@ body
   background: #121212;
 }
 
-#menu dd
+/* menu items: <nav id="menu"><ul><li><a> (the list keeps the margins of the old <dl> markup) */
+#menu ul
+{
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+}
+
+#menu li
 {
   opacity: 0.3;
   background: white;
   float: left;
-  width: 139px ;
+  width: 139px;
   height: 20px;
-  line-height: 20px ;
+  line-height: 20px;
   padding: 0px 3px;
-  margin: -8px 0px;  
+  margin: -8px 0px;
   text-align: center;
   font-weight: bold;
 }
 
-#menu dd:hover
+#menu li:hover,
+#menu li:focus-within,
+#menu .menu-active
 {
   opacity: 1;
 }
 
 #menu a
 {
+  display: block;
   color: #121212;
   text-decoration: none;
 }
 
+/* menu fixed to the top of the screen after scrolling past it (js/site.js) */
 .sticky {
   position: fixed;
   top: 0;
   margin: 0 0 !important;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-
-#menu .active
-{
-  opacity: 1;
 }
 
 #content
@@ -277,4 +280,22 @@ ul.ability-grid
 ul.ability-grid li
 {
   padding: 5px;
+}
+
+/* 404 page */
+.notfound-sword
+{
+  display: block;
+  margin: 10px auto;
+}
+
+p.notfound
+{
+  text-align: center;
+}
+
+p.notfound a
+{
+  color: white;
+  font-weight: bold;
 }
