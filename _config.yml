@@ -4,7 +4,7 @@ baseurl: ""
 # Where the registration form (reg.html) is sent, via FormSubmit (https://formsubmit.co, free, no account).
 # The first submission sends an activation email to this address; click "Activate Form" in it once.
 # After activation FormSubmit also gives you a random alias - put it here instead to hide the address.
-form_email: "andrejmasar55@gmail.com"
+form_email: "none@yet.com"
 url: ""
 exclude:
   - "*.php"
