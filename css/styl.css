@@ -1,0 +1,164 @@
+body
+{
+  font: 500 13pt sans-serif ;
+  font-height: 20pt;
+  color: white;
+  margin: 0;
+  padding: 0px 0px;
+  background: no-repeat url("data/background2.jpg") fixed center;
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#all
+{
+  margin: 265px auto 150px;
+  width: 900px;
+  z-index: 5;
+}
+
+
+#top-banner img
+{
+  position: absolute; top:0px;
+  z-index: -1;
+}
+
+
+#obrazL
+{
+  position: absolute;
+  margin: 0px -160px;
+  border: 7px groove #121212;
+}
+
+#obrazR
+{
+  position: absolute;
+  margin: 0px 940px;
+  border: 7px groove #121212;
+  width: 105px;
+}
+
+#menu
+{
+  font: bold 12pt serif ;
+  display: block;
+  height: 20px;
+  margin: 5px 0px 20px 0px;
+  z-index: 5;
+  border-top: 5px solid #121212;
+  border-left: 15px solid #121212;
+  border-right: 15px solid #121212;
+  border-bottom: 20px solid #121212;
+  background: #121212;
+}
+
+#menu dd
+{
+  opacity: 0.3;
+  background: white;
+  float: left;
+  width: 139px ;
+  height: 20px;
+  line-height: 20px ;
+  padding: 0px 3px;
+  margin: -8px 0px;  
+  text-align: center;
+  font-weight: bold;
+}
+
+#menu dd:hover
+{
+  opacity: 1;
+}
+
+#menu a
+{
+  color: #121212;
+  text-decoration: none;
+}
+
+#content
+{
+  background: url(data/leather2.jpg);
+  padding: 7px 15px;
+  border: 15px solid #121212;
+  z-index: 5;
+  min-height: 280px;
+}
+
+h1
+{
+  text-align: center;
+  font-size: 200%;
+}
+
+h2
+{
+  font-size: 175%;
+}
+
+h2.click
+{
+  cursor:pointer;
+}
+
+h3
+{
+  font-size: 130%;
+}
+
+h4
+{
+  text-align: center;
+  font-size: 110%;
+}
+
+#clickable h2
+{
+  cursor:pointer;
+}
+
+#clickable h3
+{
+  cursor:pointer;
+}
+
+#clickable h4
+{
+  text-align: center;
+}
+
+#clickable h5
+{
+  font-size: 16pt;
+  font-family: "Monotype Corsiva";
+}
+
+table
+{
+  text-align: center;
+}
+
+#galeria img
+{
+  border: 5px groove #121212;
+  margin: 5px 10px;
+  max-height: 75px;
+}
+
+#fotkyheader
+{
+  clear:both;
+  max-height: 300px;
+  cursor:pointer;
+  border: 5px groove #121212; 
+}
+
+span.error
+{
+  color: red;
+  font: 600 13pt sans-serif;
+}

@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*~
+
+# PHP
+*.log
+error_log
+
+# Composer
+vendor/
+composer.lock
+
+# Environment / secrets
+.env
+*.env
+
+# Build / temp
+*.tmp
+*.bak
+*.cache
