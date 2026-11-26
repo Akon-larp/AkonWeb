@@ -27,3 +27,8 @@ composer.lock
 *.tmp
 *.bak
 *.cache
+
+# Jekyll
+_site/
+.jekyll-cache/
+.sass-cache/

@@ -1,0 +1,125 @@
+---
+layout: default
+---
+<body>
+  <div id="all">
+    <div id="top-banner">
+      <img src="img/topbanner.png">
+    </div>
+    <div id="menu">
+      <dl>
+        <a href="uvod.html">
+          <dd> Úvod
+          </dd></a>
+        <a href="pribeh.html">
+          <dd> Príbeh
+          </dd></a>
+        <a href="pravidla.html">
+          <dd> Pravidlá
+          </dd></a>
+        <a href="fotky.html">
+          <dd> Fotky
+          </dd></a>
+        <a href="reg.html">
+          <dd> Registrácia
+          </dd></a>
+        <a href="kontakt.html">
+          <dd> Kontakt
+          </dd></a>
+      </dl>
+    </div>
+    <img id="obrazL" src="img/zena.png">
+    <img id="obrazR" src="img/paladin.png" width="105px">
+    <div id="content">
+      <h1>Registrácia</h1>
+
+
+<h2>Registračka</h2>
+<p><span class="error">* polia nutné vyplniť.</span></p>
+<form method="post" action="">
+   Meno hráča: <input type="text" name="meno" value="">
+   <span class="error">*</span>
+   <br><br>
+   Vek hráča ktorý dosiahne ku dňu 1.7.2014: <input type="text" name="vek" value="">
+   <span class="error">*</span>
+   <br><br>
+   E-mail: <input type="text" name="email" value="">
+   <span class="error">*</span>
+   <br><br>
+   Tel. číslo: <input type="text" name="cislo" value="">
+   <span class="error">*</span>
+   <br><br>
+   Meno postavy: <input type="text" name="menop" value="">
+   <span class="error">*</span>
+   <br><br>
+   Typ postavy:
+   <input type="radio" name="novmin"  value="Nová postava">Nová postava
+   <input type="radio" name="novmin"  value="Stará postava">Stará postava
+   <span class="error">*</span>
+   <br><br>
+   Rasa: <select name="rasa" id="rasa">
+   <option value=""><-- vyber --></option>
+   <option onclick="document.getElementById('povol').innerHTML=clovek;" value="Človek">Človek</option>
+   <option onclick="document.getElementById('povol').innerHTML=horal;" value="Horal">Horal</option>
+   <option onclick="document.getElementById('povol').innerHTML=nix;" value="Nix">Nix</option>
+   <option onclick="document.getElementById('povol').innerHTML=droub;" value="Droub">Droub</option>
+   <option onclick="document.getElementById('povol').innerHTML=hobit;" value="Hobit">Hobit</option>
+   <option onclick="document.getElementById('povol').innerHTML=sorp;" value="Sorp">Sorp</option>
+   <option onclick="document.getElementById('povol').innerHTML=dulon;" value="Dulon">Dulon</option>
+   <option onclick="document.getElementById('povol').innerHTML=lesny;" value="Lesný elf">Lesný elf</option>
+   <option onclick="document.getElementById('povol').innerHTML=zlaty;" value="Zlatý elf">Zlatý elf</option>
+   <option onclick="document.getElementById('povol').innerHTML=derkansky;" value="Derkánsky elf">Derkánsky elf</option>
+   <option onclick="document.getElementById('povol').innerHTML=targonsky;" value="Targónsky elf">Targónsky elf</option>
+   <option onclick="document.getElementById('povol').innerHTML=temny;" value="Temný elf">Temný elf</option>
+   <option onclick="document.getElementById('povol').innerHTML=trpaslik;" value="Trpaslík">Trpaslík</option>
+   <option onclick="document.getElementById('povol').innerHTML=amazonka;" value="Amazonka">Amazonka</option>
+   <option onclick="document.getElementById('povol').innerHTML=zorx;" value="Zorx">Zorx</option>
+   </select>
+   <span class="error">*</span>
+   <br><br>
+   Povolanie: <select name="povol" id="povol">
+   <option value=""><-- vyber --></option>
+   </select>
+   <span class="error">*</span>
+   <br><br>
+   Presvecenie: <select name="presv" id="presv">
+   <option value=""><-- vyber --></option>
+   </select>
+   <span class="error">*</span>
+   <br><br>
+   BackGround: <span class="error">*</span><br>
+   <textarea name="bg" rows="5" cols="40"></textarea>
+   <br><br>
+   Vážne zdravotné problémi (ak nemáš nechaj prázdne):
+   <br> 
+   <textarea name="zdrav" rows="5" cols="40"></textarea>
+   <br><br>
+   <input type="submit" name="submit" value="Odoslať">
+</form>      
+      
+      
+      
+          
+      <p>
+        Registrovať sa môžete najneskôr do 15.6.2014 a to na email: akon-larp@azet.sk. Na tento mail mi posielajte len registrácie. Všetky vaše ostatné dotazy mi posielajte na email: patriot-sr@azet.sk, na FB na meno Nina Vasiľová, prípadne ich riešte so mnou cez mobil: 0908481813.
+      </p>
+      <h2>Do registrácie napíšte:</h2>
+      <p>
+        - Meno hráča<br />
+        - Vek hráča (vek hráča ktorý dosiahne ku dňu 1.7.2014)<br />
+        - Tel. číslo<br />
+        - Meno postavy<br />
+        - Rasa<br />
+        - Povolanie<br />
+        - Presvedčenie<br />
+        - Viera (či je postava ateista alebo či verí v niektorého zuvedených bohov)<br />
+        - Či je postava nová, alebo pokračuje z minula<br />
+        - BackGround(povod postavy, ciele..)<br />
+        - Ak má niekto vážne zdravotné problémi tak ich uvádzajte pri registrácii!!<br />
+        - Pre tých ktorí ešte nedovŕšili 18 rokov v deň začatia akcie je potrebné aby ste doniesli vyplnené <a href="data/prehlasenie.doc">prehlásenie.</a><br /><br />
+        <b>Prehlásenie:</b> Organizátor tejto hry nepreberá akúkoľvek zodpovednosť za majetok, zdravie či život účastníkov hry.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
