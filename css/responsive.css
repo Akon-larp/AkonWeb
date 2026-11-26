@@ -1,0 +1,138 @@
+/*
+ * Responsive overrides for css/styl.css.
+ * Wide screens (>= 1260px) keep the original fixed 900px design unchanged.
+ */
+
+/* ---------- below 1260px the side portraits no longer fit next to the 900px page ---------- */
+@media (max-width: 1259px) {
+  #obrazL,
+  #obrazR {
+    display: none;
+  }
+}
+
+/* ---------- tablets and phones: fluid layout ---------- */
+@media (max-width: 940px) {
+  /* "background-attachment: fixed" is broken on mobile browsers (huge zoom / no effect),
+     so the background is drawn by a fixed layer behind the page instead */
+  body {
+    background: #121212;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    background: url("../img/background2.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  #all {
+    width: auto;
+    margin: 0 8px 40px;
+  }
+
+  /* banner scales with the screen; the menu overlaps its lower part like on desktop
+     (on desktop the menu starts 270px into the 470px high, 900px wide banner -> 200/900) */
+  #top-banner img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  #top-banner {
+    margin-bottom: -22.2%;
+  }
+
+  #menu {
+    height: auto;
+    border-width: 6px;
+    margin: 5px 0 12px;
+  }
+
+  #menu dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+  }
+
+  #menu a {
+    flex: 1 1 0;
+    min-width: 90px;
+  }
+
+  #menu dd {
+    float: none;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 8px 3px;
+    line-height: 1.2;
+  }
+
+  #menu.sticky {
+    left: 8px;
+    right: 8px;
+  }
+
+  #content {
+    border-width: 10px;
+    padding: 6px 12px;
+    overflow-wrap: break-word;
+  }
+
+  #content img,
+  #fotkyheader {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* wide rule tables scroll sideways instead of stretching the page */
+  #content table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* ---------- phones ---------- */
+@media (max-width: 600px) {
+  body {
+    font-size: 12pt;
+  }
+
+  h1 {
+    font-size: 160%;
+  }
+
+  h2 {
+    font-size: 140%;
+  }
+
+  h3 {
+    font-size: 120%;
+  }
+
+  #content {
+    border-width: 6px;
+    padding: 4px 10px;
+  }
+
+  /* pictures floated next to the text (map, location, organisers) go full width above it */
+  #content img[style*="float"] {
+    float: none !important;
+    display: block;
+    margin: 10px auto;
+  }
+
+  #galeria img {
+    margin: 4px;
+    max-height: 60px;
+  }
+}
