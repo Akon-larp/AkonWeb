@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Akon</title>
+  <!-- Sword pointing down, in the colours of the Akon logo -->
+  <defs>
+    <linearGradient id="blade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f1ecfa"/>
+      <stop offset="0.5" stop-color="#cdbfe8"/>
+      <stop offset="0.5" stop-color="#9f8fcf"/>
+      <stop offset="1" stop-color="#7a6ab0"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a493d6"/>
+      <stop offset="1" stop-color="#5c4b93"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#1d1530" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke">
+    <!-- blade -->
+    <path d="M26.5 25 H37.5 V48 L32 62 L26.5 48 Z" fill="url(#blade)"/>
+    <!-- grip -->
+    <rect x="28.5" y="9" width="7" height="14" rx="1.5" fill="#4a3b7a"/>
+    <!-- crossguard with flared ends -->
+    <path d="M6 17 Q9 22 15 22.5 H49 Q55 22 58 17 Q60 24 53 27.5 H11 Q4 24 6 17 Z" fill="url(#metal)"/>
+    <!-- pommel -->
+    <circle cx="32" cy="7" r="5.5" fill="url(#metal)"/>
+  </g>
+  <!-- fuller (groove in the blade) and grip wrapping -->
+  <path d="M32 29 V50" stroke="#6a5aa3" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M29 13 H35 M29 17 H35" stroke="#2b2148" stroke-width="1.2"/>
+</svg>
