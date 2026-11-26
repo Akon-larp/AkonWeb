@@ -1,58 +1,833 @@
 ---
 layout: default
+menu: reg
 ---
+                <h1>Registrácia</h1>
+                <h2>Registračka</h2>
+                <p>
+                    Registrovať sa môžete najneskôr do 31.5.2020 a to tu na stránke. Všetky vaše ostatné dotazy mi posielajte na email: patriot-sr@azet.sk, na FB na meno Nina Hollá, prípadne ich riešte so mnou cez mobil: 0908481813.
+                </p>
+				
+				<html>
+<head>
+    <title>PHP FormMail Generator - A free tool to create ready-to-use web email forms with file upload, auto-response email, and dependent dropdowns.</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,, user-scalable=no">
+
+    <meta name="keywords" content="PHP FormMail Generator, Free Form, Form Builder, Form Creator, phpFormMailGen, Customized Web Forms, phpFormMailGenerator,formmail.php, formmail.pl, formMail Generator, ASP Formmail, ASP form, PHP Form, Generator, phpFormGen, phpFormGenerator, anti-spam, web hosting">
+    <meta name="description" content="PHP formMail Generator - A tool to ceate ready-to-use web forms in a flash">
+    <meta name="generator" content="PHP Mail Form Generator, phpfmg.sourceforge.net">
+</head>
 <body>
-  <div id="all">
-    <div id="top-banner">
-      <img src="img/topbanner.png">
-    </div>
-    <div id="menu">
-      <dl>
-        <a href="uvod.html">
-          <dd> Úvod
-          </dd></a>
-        <a href="pribeh.html">
-          <dd> Príbeh
-          </dd></a>
-        <a href="pravidla.html">
-          <dd> Pravidlá
-          </dd></a>
-        <a href="fotky.html">
-          <dd> Fotky
-          </dd></a>
-        <a href="reg.html">
-          <dd> Registrácia
-          </dd></a>
-        <a href="kontakt.html">
-          <dd> Kontakt
-          </dd></a>
-      </dl>
-    </div>
-    <img id="obrazL" src="img/zena.png">
-    <img id="obrazR" src="img/paladin.png" width="105px">
-    <div id="content">
-      <h1>Registrácia</h1>
-<h2>Registračka</h2>      
-      <p>
-        Registrovať sa môžete najneskôr do 15.6.2014 a to na email: akon-larp@azet.sk. Na tento mail mi posielajte len registrácie. Všetky vaše ostatné dotazy mi posielajte na email: patriot-sr@azet.sk, na FB na meno Nina Vasiľová, prípadne ich riešte so mnou cez mobil: 0908481813.
-      </p>
-      <h2>Do registrácie napíšte:</h2>
-      <p>
-        - Meno hráča<br />
-        - Vek hráča (vek hráča ktorý dosiahne ku dňu 1.7.2014)<br />
-        - Tel. číslo<br />
-        - Meno postavy<br />
-        - Rasa<br />
-        - Povolanie<br />
-        - Presvedčenie<br />
-        - Viera (či je postava ateista alebo či verí v niektorého zuvedených bohov)<br />
-        - Či je postava nová, alebo pokračuje z minula<br />
-        - BackGround(povod postavy, ciele..)<br />
-        - Ak má niekto vážne zdravotné problémi tak ich uvádzajte pri registrácii!!<br />
-        - Pre tých ktorí ešte nedovŕšili 18 rokov v deň začatia akcie je potrebné aby ste doniesli vyplnené <a href="data/prehlasenie.doc">prehlásenie.</a><br /><br />
-        <b>Prehlásenie:</b> Organizátor tejto hry nepreberá akúkoľvek zodpovednosť za majetok, zdravie či život účastníkov hry.
-      </p>
-    </div>
-  </div>
-</body>
+<style type='text/css'>
+ol.phpfmg_form{
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+}
+
+ol.phpfmg_form input, ol.phpfmg_form textarea, ol.phpfmg_form select{
+    border: 1px solid #ccc;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+ol.phpfmg_form li{
+    margin-bottom:5px;
+    clear:both;
+    display:block;
+    overflow:hidden;
+	width: 100%
+}
+
+
+.form_field, .form_required{
+    font-weight : bold;
+}
+
+.form_required{
+    color:red;
+    margin-right:8px;
+}
+
+.form_error_highlight label.form_field{
+	color: red;
+}
+
+.field_block_over{
+}
+
+.form_submit_block{
+    padding-top: 3px;
+}
+
+.text_box,.text_select {
+    height: 32px;
+}
+
+.text_box, .text_area, .text_select {
+    min-width:160px;
+    max-width:500px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.text_area{
+    height:80px;
+}
+
+.form_error_title{
+    font-weight: bold;
+    color: red;
+}
+
+.form_error{
+    background-color: #F4F6E5;
+    border: 1px dashed #ff0000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+div.instruction{
+    display:inline-block;
+}
+
+div.instruction_error{
+    font-weight:bold;
+}
+
+hr.sectionbreak{
+    height:1px;
+    color: #ccc;
+}
+
+#one_entry_msg{
+    background-color: #F4F6E5;
+    border: 1px dashed #ff0000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+#frmFormMailContainer input[type="submit"]{
+    padding: 10px 25px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: #FAFBFC;
+}
+
+#frmFormMailContainer input[type="submit"]:hover{
+    background-color: #E4F0F8;
+}
+
+    
+
+
+
+</style>
+
+
+
+<div class='form_description'>
+
+</div>
+
+
+
+
+
+
+<div id='frmFormMailContainer'>
+
+<form name="frmFormMail" id="frmFormMail" target="submitToFrame" action='admin.php' method='post' enctype='multipart/form-data' onsubmit='return fmgHandler.onSubmit(this);'>
+
+<input type='hidden' name='formmail_submit' value='Y'>
+<input type='hidden' name='mod' value='ajax'>
+<input type='hidden' name='func' value='submit'>
+
+            
+<ol class='phpfmg_form' >
+
+<li class='field_block' id='field_0_div'><div class='col_label'>
+	<label class='form_field'>Meno a priezvisko</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<input type="text" name="field_0"  id="field_0" value="" class='text_box'>
+	<div id='field_0_tip' class='instruction'></div>
+	</div>
+</li>
+
+<li class='field_block' id='field_1_div'><div class='col_label'>
+	<label class='form_field'>Telefónne číslo</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<input type="text" name="field_1"  id="field_1" value="" class='text_box'>
+	<div id='field_1_tip' class='instruction'></div>
+	</div>
+</li>
+
+<li class='field_block' id='field_2_div'><div class='col_label'>
+	<label class='form_field'>E-mailová adresa</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<input type="text" name="field_2"  id="field_2" value="" class='text_box'>
+	<div id='field_2_tip' class='instruction'></div>
+	</div>
+</li>
+
+<li class='field_block' id='field_3_div'><div class='col_label'>
+	<label class='form_field'>Vek</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<input type="text" name="field_3"  id="field_3" value="" class='text_box'>
+	<div id='field_3_tip' class='instruction'>vek hráča, ktorý dosiahne ku začiatku larpu</div>
+	</div>
+</li>
+
+<li class='field_block' id='field_4_div'><div class='col_label'>
+	<label class='form_field'>Mesto kde bývaš, študuješ</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<input type="text" name="field_4"  id="field_4" value="" class='text_box'>
+	<div id='field_4_tip' class='instruction'></div>
+	</div>
+</li>
+
+<li class='field_block' id='field_5_div'><div class='col_label'>
+	<label class='form_field'>Zdravotný stav</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<textarea name="field_5" id="field_5" rows=4 cols=25 class='text_area'></textarea>
+
+	<div id='field_5_tip' class='instruction'>zdravý, alebo uviesť akékoľvek závažné ochorenie, alergia a pod.</div>
+	</div>
+</li>
+
+<li class='field_block' id='field_6_div'><div class='col_label'>
+	<label class='form_field'>Meno postavy</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<input type="text" name="field_6"  id="field_6" value="" class='text_box'>
+	<div id='field_6_tip' class='instruction'></div>
+	</div>
+</li>
+
+<li class='field_block' id='field_7_div'><div class='col_label'>
+	<label class='form_field'>Rasa</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<select name='field_7' id='field_7' class='text_select'    >	
+<option value="Človek" >Človek</option>	
+<option value="Horal" >Horal</option>	
+<option value="Nix" >Nix</option>	
+<option value="Droub" >Droub</option>	
+<option value="Hobit" >Hobit</option>	
+<option value="Sorp" >Sorp</option>	
+<option value="Dulon" >Dulon</option>	
+<option value="Lesný elf" >Lesný elf</option>	
+<option value="Zlatý elf" >Zlatý elf</option>	
+<option value="Derkánsky elf" >Derkánsky elf</option>	
+<option value="Targónsky elf" >Targónsky elf</option>	
+<option value="Temný elf" >Temný elf</option>	
+<option value="Trpaslík" >Trpaslík</option>	
+<option value="Amazonka" >Amazonka</option>	
+<option value="Zorx" >Zorx</option>	
+<option value="Iné" >Iné</option>	
+</select>
+	<div id='field_7_tip' class='instruction'></div>
+	</div>
+</li>
+
+<li class='field_block' id='field_8_div'><div class='col_label'>
+	<label class='form_field'>Povolanie</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<select name='field_8' id='field_8' class='text_select'    >	
+<option value="Rytier" >Rytier</option>	
+<option value="Žoldnier" >Žoldnier</option>	
+<option value="Vojak" >Vojak</option>	
+<option value="Hraničiar" >Hraničiar</option>	
+<option value="Strelec" >Strelec</option>	
+<option value="Lovec odmien" >Lovec odmien</option>	
+<option value="Zlodej" >Zlodej</option>	
+<option value="Mág" >Mág</option>	
+<option value="Čarodejník" >Čarodejník</option>	
+<option value="Klerik" >Klerik</option>	
+<option value="Barbar/Berserk" >Barbar/Berserk</option>	
+<option value="Bojovník" >Bojovník</option>	
+<option value="Lovec" >Lovec</option>	
+<option value="Lovec skalpov" >Lovec skalpov</option>	
+<option value="Zbojník" >Zbojník</option>	
+<option value="Šaman" >Šaman</option>	
+<option value="Druid" >Druid</option>	
+<option value="Zaklínač" >Zaklínač</option>	
+<option value="Iné" >Iné</option>	
+</select>
+	<div id='field_8_tip' class='instruction'></div>
+	</div>
+</li>
+
+<li class='field_block' id='field_9_div'><div class='col_label'>
+	<label class='form_field'>Presvedčenie</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<select name='field_9' id='field_9' class='text_select'    >	
+<option value="1. Absolútne dobro" >1. Absolútne dobro</option>	
+<option value="2. Dobro" >2. Dobro</option>	
+<option value="3. Relatívne dobro" >3. Relatívne dobro</option>	
+<option value="4. Neutralita" >4. Neutralita</option>	
+<option value="5. Relatívne zlo" >5. Relatívne zlo</option>	
+<option value="6. Zlo" >6. Zlo</option>	
+<option value="7. Absolútne zlo" >7. Absolútne zlo</option>	
+<option value="Iné" >Iné</option>	
+</select>
+	<div id='field_9_tip' class='instruction'></div>
+	</div>
+</li>
+
+<li class='field_block' id='field_10_div'><div class='col_label'>
+	<label class='form_field'>Viera</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<input type="text" name="field_10"  id="field_10" value="" class='text_box'>
+	<div id='field_10_tip' class='instruction'></div>
+	</div>
+</li>
+
+<li class='field_block' id='field_11_div'><div class='col_label'>
+	<label class='form_field'>Už absolvované akcie</label> <label class='form_required' >*</label> </div>
+	<div class='col_field'>
+	<textarea name="field_11" id="field_11" rows=4 cols=25 class='text_area'></textarea>
+
+	<div id='field_11_tip' class='instruction'></div>
+	</div>
+</li>
+
+
+<li class='field_block' id='phpfmg_captcha_div'>
+	<div class='col_label'><label class='form_field'>Security Code:</label> <label class='form_required' >*</label> </div><div class='col_field'>
+	<a href='http://www.formmail-maker.com' onclick="document.getElementById('phpfmg_captcha_image').src='admin.php?mod=captcha&amp;func=get&amp;tid='+Math.random();return false;"  title="Free Mail Form Tool"><img id="phpfmg_captcha_image" src="admin.php?mod=captcha&amp;func=get&amp;tid=1795717218"  border=0 style="cursor:pointer;" alt="Click the image to reload. PHP FormMail Generator at http://phpfmg.sourceforge.net"></a>
+<a href='http://phpfmg.sourceforge.net' onclick="document.getElementById('phpfmg_captcha_image').src='admin.php?mod=captcha&amp;func=get&amp;tid='+Math.random();return false;"  style="color:#474747;" title="Reload PHP FormMail Generator Security Image" >Reload Image</a><br>
+<input type='text' name='e8f5a9cb' value='' class='fmgCaptchCode text_box' style='width:73px;' >
+	</div>
+</li>
+
+
+            <li>
+            <div class='col_label'>&nbsp;</div>
+            <div class='form_submit_block col_field'>
+	
+
+                <input type='submit' value='Poslať' class='form_button'>
+
+				<div id='err_required' class="form_error" style='display:none;'>
+				    <label class='form_error_title'>Všetko pekne vyplň.</label>
+				</div>
+				
+
+
+                <span id='phpfmg_processing' style='display:none;'>
+                    <img id='phpfmg_processing_gif' src='admin.php?mod=image&amp;func=processing' border=0 alt='Processing...'> <label id='phpfmg_processing_dots'></label>
+                </span>
+            </div>
+            </li>
+
+</ol>
+</form>
+
+<iframe name="submitToFrame" id="submitToFrame" src="javascript:false" style="position:absolute;top:-10000px;left:-10000px;" /></iframe>
+
+</div>
+<!-- end of form container -->
+
+
+<!-- [Your confirmation message goes here] -->
+<div id='thank_you_msg' style='display:none;'>
+Registračka bola odoslaná!
+</div>
+<script type="text/javascript">
+ /**
+*
+*  UTF-8 data encode / decode
+*  http://www.webtoolkit.info/
+*
+**/
+
+var Utf8 = {
+
+	// public method for url encoding
+	encode : function (string) {
+		string = string.replace(/\r\n/g,"\n");
+		var utftext = "";
+
+		for (var n = 0; n < string.length; n++) {
+
+			var c = string.charCodeAt(n);
+
+			if (c < 128) {
+				utftext += String.fromCharCode(c);
+			}
+			else if((c > 127) && (c < 2048)) {
+				utftext += String.fromCharCode((c >> 6) | 192);
+				utftext += String.fromCharCode((c & 63) | 128);
+			}
+			else {
+				utftext += String.fromCharCode((c >> 12) | 224);
+				utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+				utftext += String.fromCharCode((c & 63) | 128);
+			}
+
+		}
+
+		return utftext;
+	},
+
+	// public method for url decoding
+	decode : function (utftext) {
+		var string = "";
+		var i = 0;
+		var c = c1 = c2 = 0;
+
+		while ( i < utftext.length ) {
+
+			c = utftext.charCodeAt(i);
+
+			if (c < 128) {
+				string += String.fromCharCode(c);
+				i++;
+			}
+			else if((c > 191) && (c < 224)) {
+				c2 = utftext.charCodeAt(i+1);
+				string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+				i += 2;
+			}
+			else {
+				c2 = utftext.charCodeAt(i+1);
+				c3 = utftext.charCodeAt(i+2);
+				string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+				i += 3;
+			}
+
+		}
+
+		return string;
+	}
+
+}
+
+ function dd_change( n, max, prefix ){
+    if( n >= max-1 )
+        return; // the last dropdown, no need to query
+
+    //var prefix = 'dd_' ;
+    // reset all other dropdown options
+    var next = n+1;
+    for( var i = next; i < max; i ++ ){
+        var dd = document.getElementById(prefix +'_' + i );
+        if( dd && dd.length >= 1 ) dd.length = 1 ; // keep the first one '- select -'
+    };
+
+
+    // request drop down data from server
+    var me = this;
+    var http;
+    var isIE = navigator.appName == "Microsoft Internet Explorer";
+    if(isIE){
+        me.http = new ActiveXObject("Microsoft.XMLHTTP");
+    }else{
+        me.http = new XMLHttpRequest();
+    };
+
+
+    // build query string
+    var lookup = [];
+    for( var i = 0; i < next; i ++ ){
+        var v = document.getElementById(prefix +'_' +  i ).value ;
+        lookup.push( "lookup[" + i + "]=" + escape( isIE ? Utf8.encode(v) : v ) );
+    };
+    lookup = lookup.join('&');
+
+    var url = 'admin.php?mod=dd&func=lookup&n='+next+ '&field_name=' + prefix + '&' + lookup;
+    me.http.open('get', url);
+    me.http.onreadystatechange = function(){
+
+        if( me.http.readyState == 4 ){
+            // rebuild the next dropdown options
+            var eNext = document.getElementById(prefix +'_' + next );
+            if( !eNext )
+                return;
+
+            var data = me.http.responseText;
+            var opts = String(data).split("\n");
+            for( var j = 0, J = opts.length; j < J; j ++ ){
+                eNext.options[ eNext.length ] = new Option( opts[j], opts[j], false, false );
+            }; // for
+        }; //if
+
+    };
+    me.http.send(null);
+
+ }
+
+
+function PHPFMG( formID ){
+    var frmID = formID;
+    var exts = {
+        'upload_control' : '',
+        'harmful_exts'  : '.php, .php2, .php3, .php4, .php5, .php6, .php7, .html, .css, .js, .exe, .com, .bat, .vb, .vbs, scr, .inf, .reg, .lnk, .pif, .ade, .adp, .app, .bas, .chm, .cmd, .cpl, .crt, .csh, .fxp, .hlp, .hta, .ins, .isp, .jse, .ksh, .Lnk, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .msc, .msi, .msp, .mst, .ops, .pcd, .prf, .prg, .pst, .scf, .scr, .sct, .shb, .shs, .url, .vbe, .wsc, .wsf, .wsh',
+        'harmful_errmsg': "File is potential harmful. Upload is not allowed.",
+        'allow_exts'  : '.jpg, .gif, .png, .bmp',
+        'allow_errmsg': "Upload is not allowed. Please check your file type."
+    };
+    var redirect = "";
+
+
+    var Form = null;
+    var err_fields=null;
+
+    function $( id ){
+        return document.getElementById(id);
+    }
+
+    function get_form( id ){
+        var frm = 'object' == typeof($(id)) ? $(id) : eval( 'document.' + id ) ;
+        return frm ? frm : document.forms[0];
+    }
+
+    function file_ext( f ){
+        var n = f.lastIndexOf(".");
+        return -1 == n ? '' : f.substr( n ).toLowerCase();
+    }
+
+    function addLabelEvents(){
+        var labels = document.body.getElementsByTagName('LABEL');
+        for( var i = 0, N = labels.length; i < N; i ++ ){
+            var e = labels[i];
+            if( -1 != String(e.className).indexOf('form_choice_text') ){
+                var oid = e.getAttribute('oid');
+                if( !oid ) continue;
+
+                e.onmouseout = function(){ this.className = 'form_choice_text'; };
+                e.onmouseover = function(){ this.className = 'form_choice_text form_choice_over'; };
+                e.onclick = function(){
+                    try{
+                        var oid = this.getAttribute('oid');
+                        var O = document.getElementById(oid);
+                        O.checked = !O.checked;
+                    }
+                    catch(E){};
+                };
+            }; // if
+        }; // for
+    }
+
+
+    function addFieldBlockEvents(){
+        var divs = document.body.getElementsByTagName('DIV');
+        for( var i = 0, N = divs.length; i < N; i ++ ){
+            var e = divs[i];
+            if( -1 != String(e.className).indexOf('field_block') ){
+                e.onmouseout = function(){  if( String(this.className).indexOf('form_error_highlight') == -1 ) this.className = 'field_block'; };
+                e.onmouseover = function(){ if( String(this.className).indexOf('form_error_highlight') == -1 ) this.className = 'field_block field_block_over'; };
+            }; // if
+        }; // for
+    }
+
+    function removeHighlight( elements ){
+        var divs = typeof(elements) == 'object' ? elements : document.body.getElementsByTagName('DIV');
+        for( var i = 0, N = divs.length; i < N; i ++ ){
+            var e = divs[i];
+            var cn = String(e.className);
+            if( -1 != cn.indexOf('form_error_highlight') ){
+                e.className = cn.replace('form_error_highlight','');
+            } else if ( -1 != cn.indexOf('instruction_error') ){
+                e.className = cn.replace('instruction_error','');
+            };
+
+        }; // for
+    }
+
+    function showProcessing( hide ){
+        try{
+            var E = $('phpfmg_processing');
+            if( !E ) return ;
+            if( -1 != navigator.userAgent.toLowerCase().indexOf('msie') ){
+                E.style.backgroundColor='#2960AF';
+                $('phpfmg_processing_gif').style.display = 'none';
+                setInterval( 'fmgHandler.dots()', 300 );
+            }else{
+                $('phpfmg_processing_gif').style.display = hide ? 'none' : '';
+            };
+            E.style.display = hide ? 'none' : '';
+        }catch(e){};
+
+    }
+
+    function setVisible( id, show ){
+        var E = $(id);
+        if( !E ) return ;
+        E.style.display = show ? '' : 'none';
+    }
+
+
+
+    this.highlight_fields = function( fields ){
+        var A = fields.split(',');
+        for( var i = 0, N = A.length; i < N; i ++ ){
+            var E = $( A[i] + '_div' );
+            if( E ){
+                E.className += ' form_error_highlight';
+            };
+            var T = $( A[i] + '_tip' );
+            if( T ){
+                T.className += ' instruction_error';
+            };
+        };
+
+        if( A.length > 0 ) {
+            $('err_required').style.display= has_entry( fields ) ? 'none' : '';
+        };
+    }
+
+    function has_entry( fields ){
+        var div = $('one_entry_msg');
+        if( !div )
+            return false;
+
+        div.style.display = fields.indexOf('phpfmg_found_entry') != -1 ? '' : 'none';
+        if( typeof(found_entry) != 'undefined' ){
+            div.innerHTML = div.innerHTML.replace(/%Entry%/gi,found_entry);
+            return true;
+        };
+
+        return false ;
+    }
+
+
+    this.choice_clicked = function( id ){
+        $(id).checked = !$(id).checked ;
+    }
+
+
+    this.init = function(){
+        //addLabelEvents();
+        addFieldBlockEvents();
+    }
+
+    this.harmful = function(e){
+        if( 'deny' != exts['upload_control'] || e.value == '' ){
+            return true;
+        };
+
+        var div = $(e.id+'_div');
+        removeHighlight( [div] );
+        var ext = file_ext(e.value);
+        if( -1 != exts['harmful_exts'].toLowerCase().indexOf(ext) ){
+            this.highlight_fields(e.id);
+            alert( exts['harmful_errmsg'] );
+            return false ;
+        };
+        return true;
+    }
+
+
+
+    this.is_allow = function(e){
+        if( 'allow' != exts['upload_control'] || e.value == '' ){
+            return true;
+        };
+
+        var div = $(e.id+'_div');
+        removeHighlight( [div] );
+        var ext = file_ext(e.value);
+        if( -1 == exts['allow_exts'].toLowerCase().indexOf(ext) ){
+            this.highlight_fields(e.id);
+            alert( exts['allow_errmsg'] );
+            return false ;
+        };
+        return true;
+    }
+
+    this.check_upload = function(e){
+        if( '' == exts['upload_control'] )
+            return true;
+        else
+            return ( 'deny' == exts['upload_control'] )
+                   ? this.harmful(e)
+                   : this.is_allow(e);
+    }
+
+    this.dots = function(){
+        $('phpfmg_processing_dots').innerHTML += '.';
+		if( $('phpfmg_processing_dots').innerHTML.length >= 38 ) {
+			$('phpfmg_processing_dots').innerHTML = '.';
+		};
+    }
+
+    this.check_fields = function(){
+        if( !Form )
+            return true ;
+
+        var pass = true ;
+        for( var i=0, n=Form.elements.length; i < n ; i ++ ){
+          var field = Form.elements[i];
+          var type = field.length != undefined && field.type == undefined ? 'radio' : field.type ;
+          switch( type.toLowerCase() ){
+            case 'file':
+                pass = this.check_upload(field);
+                break;
+          };
+          if( !pass ) return false ;
+        };
+
+        return true;
+    }
+
+    function removeAllHighlightedFields(){
+        removeHighlight( document.body.getElementsByTagName('LI') );
+        removeHighlight();
+        var E = $('err_required');
+        if( E ) E.style.display = 'none' ;
+    }
+
+    this.onSubmit = function( form ){
+        Form = form ? form : get_form(frmID) ;
+        //Form.action = location.href.replace('#error','');
+        if( !this.check_fields() )
+            return false ;
+
+        removeAllHighlightedFields();
+        showProcessing();
+        return true;
+    }
+
+    this.onResponse = function( data ){
+        removeAllHighlightedFields();
+        showProcessing( true ); // true : hide processing indicator
+
+        var ok = data && typeof data['ok'] === 'boolean' ? data['ok'] : false ;
+        if( ok === true ) {
+            fmgHandler.submitOK();
+            return;
+        };
+
+        var fields = data && typeof data['error_fields'] === 'object' ? data['error_fields'] : false ;
+        this.highlight_fields( fields + "" );
+
+
+        var oneEntry = data && typeof data['OneEntry'] !== 'undefined'  ? data['OneEntry'] : '' ;
+        if( oneEntry != '' ){
+            setVisible( 'err_required', false );
+            window.found_entry = oneEntry; // inject it as global variable for below function call
+            has_entry( fields );
+        };
+
+
+/*        // reset errors
+        $('#err_required').hide();
+        $( '.form_error_highlight' ).removeClass('form_error_highlight');
+
+        $.each( fields, function( idx, field ){
+            $('#'+field+'_div').addClass('form_error_highlight');
+        } );
+
+        if( fields.length > 0 ){
+            $('#err_required').show();
+        };
+*/
+    }
+
+     function showThankYouMessage(){
+        setVisible( 'frmFormMailContainer',false );
+        setVisible( 'thank_you_msg',true );
+    }
+
+    this.submitOK = function(){
+        if( redirect == '' ){
+            showThankYouMessage();
+            return;
+        };
+
+        try{
+            if( parent ) parent.location.href = redirect;
+        }catch(e){
+            location.href = redirect;
+        };
+    }
+
+
+}
+
+function toggleOtherInputBox( name, type, id ){
+    var field = document.getElementById(id);
+    if( !field ) return ;
+    var box = document.getElementById(name+'_other');
+    var other_check = document.getElementById(name+'_other_check');
+    if( !box || !other_check ) return ;
+
+    switch( type.toLowerCase() ){
+        case 'checkbox':
+            box.style.display = field.checked ? '' : 'none';
+            other_check.value = field.checked ? 1 : 0 ;
+            break;
+        case 'radio':
+            for( var i=0,n=document.forms.length; i < n; i ++ ){
+                try{
+                    var r = eval( 'document.forms['+i+'].'+name );
+                    if( r ){
+                        box.style.display = r[r.length-1].checked ? '' : 'none';
+                        other_check.value = r[r.length-1].checked ? 1 : 0 ;
+                    };
+                }catch(err){};
+            };
+            break;
+        case 'select':
+            box.style.display = field.options[field.options.length-1].selected ? '' : 'none';
+            other_check.value = field.options[field.options.length-1].selected ? 1 : 0 ;
+            break;
+    };
+
+}
+
+
+
+var fmgHandler = new PHPFMG();
+fmgHandler.init();
+/*
+// Sep 2013, add ajax submit support with jQuery
+$('#frmFormMail').submit( function(event){
+    event.preventDefault();
+    var
+    $form = $(this),
+    url = $form.prop('action');
+    $.post( url, $form.serialize(), function(data){
+        var ok = data && typeof data['ok'] === 'boolean' ? data['ok'] : false ;
+        if( ok === true ) {
+            fmgHandler.submitOK();
+            return;
+        };
+
+        var fields = data && typeof data['error_fields'] === 'object' ? data['error_fields'] : false ;
+        // reset errors
+        $('#err_required').hide();
+        $( '.form_error_highlight' ).removeClass('form_error_highlight');
+
+        $.each( fields, function( idx, field ){
+            $('#'+field+'_div').addClass('form_error_highlight');
+        } );
+
+        if( fields.length > 0 ){
+            $('#err_required').show();
+        };
+
+
+
+    }, 'json' );
+
+});
+*/
+
+
+
+</script>
+
+<div class='form_footer'>
+
+</div>
+ </body>
 </html>
+				
+            </div>
+        </div>
+    

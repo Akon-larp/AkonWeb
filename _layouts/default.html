@@ -1,2 +1,76 @@
-{% include head.html %}
-{{ content }}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sk" lang="sk">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="language" content="sk" />
+    <title> Akon - Vojnou zmietaná zem.
+    </title>
+    <meta name="author" content="Andrej Masár" />
+    <meta name="description" content="Akon - Vojnou zmietaná zem" />
+    <meta name="keywords" content="LARP, larp, Larp, Akon, Akon - vojnou zmietana zem, akon, Nová Dubnica, nová dubnica, Nová dubnica, nová Dubnica, nova dubnica, Nova dubnica, Nova Dubnica, nova Dubnica" />
+    <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" type="text/css" href="css/styl.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/lightbox.js"></script>
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function toggleNext(elem) {
+            $(elem).next().toggle();
+        }
+    </script>
+</head>
+    <body>
+        <div id="all">
+            <div id="top-banner">
+                <img src="img/topbanner.png">
+            </div>
+            <div id="menu">
+                <dl>
+                    <a href="index.html">
+                        <dd{% if page.menu == "index" %} class="menu-active"{% endif %}> Úvod
+                        </dd>
+                    </a>
+                    <a href="pribeh.html">
+                        <dd{% if page.menu == "pribeh" %} class="menu-active"{% endif %}> Príbeh
+                        </dd>
+                    </a>
+                    <a href="pravidla.html">
+                        <dd{% if page.menu == "pravidla" %} class="menu-active"{% endif %}> Pravidlá
+                        </dd>
+                    </a>
+                    <a href="fotky.html">
+                        <dd{% if page.menu == "fotky" %} class="menu-active"{% endif %}> Fotky
+                        </dd>
+                    </a>
+                    <a href="reg.html">
+                        <dd{% if page.menu == "reg" %} class="menu-active"{% endif %}> Registrácia
+                        </dd>
+                    </a>
+                    <a href="kontakt.html">
+                        <dd{% if page.menu == "kontakt" %} class="menu-active"{% endif %}> Kontakt
+                        </dd>
+                    </a>
+                </dl>
+            </div>
+            <img id="obrazL" src="img/zena.png">
+            <img id="obrazR" src="img/paladin.png"{% if page.menu != "index" %} width="105px"{% endif %}>
+            <div id="content">
+{{ content }}</body>
+
+</html>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("menu");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>

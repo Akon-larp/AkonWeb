@@ -80,6 +80,21 @@ body
   text-decoration: none;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  margin: 0 0 !important;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+#menu .active
+{
+  opacity: 1;
+}
+
 #content
 {
   background: url(../img/leather2.jpg);
@@ -116,25 +131,62 @@ h4
   font-size: 110%;
 }
 
-#clickable h2
+#clickable div
 {
-  cursor:pointer;
+  display: none;
 }
 
-#clickable h3
+#clickable a
 {
   cursor:pointer;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-#clickable h4
+#clickable h2.click
+{
+  cursor:pointer;
+  transition: 0.3s;
+}
+
+#clickable h2.click:hover
+{
+  color: #bb0000;
+}
+
+#clickable h3.click
+{
+  cursor:pointer;
+  transition: 0.3s;
+}
+
+#clickable h3.click:hover
+{
+  color: #bb0000;
+}
+
+#clickable h4.click
 {
   text-align: center;
+  transition: 0.3s;
+}
+
+#clickable h4.click:hover
+{
+  color: #bb0000;
 }
 
 #clickable h5
 {
   font-size: 16pt;
   font-family: "Monotype Corsiva";
+  transition: 0.3s;
+}
+
+#clickable h5.click:hover
+{
+  color: #bb0000;
 }
 
 table
